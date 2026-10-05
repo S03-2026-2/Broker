@@ -3,8 +3,11 @@ from .topico import Topico
 
 class Pedido(Topico):
 
+    def envioDeMensagem(self):
+        raise NotImplementedError
+
     def envioDePedido(self):
-        pass
+        raise NotImplementedError
 
     def envioDeNotificacao(self):
-        pass
+        raise NotImplementedError
