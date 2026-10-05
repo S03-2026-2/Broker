@@ -1,5 +1,5 @@
-from mensagens.pedido import Pedido
-from mensagens.resposta import Resposta
+from app.mensagens.pedido import Pedido
+from app.mensagens.resposta import Resposta
 
 
 def main():
