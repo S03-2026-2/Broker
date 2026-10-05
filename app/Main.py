@@ -1,9 +1,15 @@
-from broker.broker import Broker
+from mensagens.pedido import Pedido
+from mensagens.resposta import Resposta
 
 
 def main():
-    broker = Broker()
+    pedido = Pedido()
+    resposta = Resposta()
+
+    print("Broker iniciado.")
+    print(f"Pedido: {type(pedido)._name_}")
+    print(f"Resposta: {type(resposta)._name_}")
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
