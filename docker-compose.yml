@@ -1,0 +1,16 @@
+services:
+  broker:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      BROKER_MAX_TENTATIVAS: "3"
+      BROKER_INTERVALO_REENTREGA: "5"
+      BROKER_CHAVE_API: "${BROKER_CHAVE_API:-}"
+
+  # Aplicação de exemplo que recebe eventos (no projeto real, cada equipe tem a sua).
+  distribuicao:
+    build: .
+    command: ["uvicorn", "demo_http.receptor:app", "--host", "0.0.0.0", "--port", "9000"]
+    ports:
+      - "9000:9000"

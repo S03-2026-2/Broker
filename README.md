@@ -12,9 +12,7 @@ Funciona como biblioteca Python (uso local) e como serviço HTTP (integração e
     python -m app.main                                  # demonstração local, sem rede
     uvicorn app.api.principal:app --port 8000           # serviço HTTP
     pytest                                              # todos os testes
-    pytest -m unit
-    pytest -m integration
-    pytest -m system               
+    pytest -m unit | integration | system               # por nível
     pytest --cov=app --cov-report=term-missing
 
 Com o serviço no ar:
