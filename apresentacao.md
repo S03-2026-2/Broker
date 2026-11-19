@@ -64,10 +64,7 @@ flowchart LR
 | Proxy (remoto) | Estrutural | `ClienteHttpBroker` | Usar o Broker pela rede com o mesmo contrato do local | Aplicado |
 | Factory | Criacional | `Mensagem.criar` e a fábrica de assinantes da API | Centralizar a criação de objetos | Aplicado, em forma simples |
 
-Duas observações:
-
 - **Observer vs. pub/sub:** o Observer atua dentro de um processo, e o publish/subscribe é a sua versão distribuída, com um intermediário no meio.
-- **Factory:** é uma fábrica simples, não o Factory Method clássico do GoF.
 
 ## 3. RabbitMQ × Broker do projeto
 
